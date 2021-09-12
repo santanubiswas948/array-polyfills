@@ -30,5 +30,17 @@ if (!Array.prototype.map) {
             return arr;
         }
     }
+// Ployfill for forEach
+    if (!Array.prototype.forEach) {
+        Array.prototype.forEach = function (callback) {
+            try {
+                for (var i = 0; i< this.length; i++) {
+                    callback(this[i]);
+                }
+            } catch(e){
+                throw new Error(e);
+            }
+        }
+    }
 
 })()
