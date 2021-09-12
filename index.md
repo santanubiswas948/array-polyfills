@@ -1,8 +1,24 @@
 # array-polyfills
-
-This is a polyfills `.js` file to support few array methods (map, filter, forEach, reverse) which maybe doesn't support in old browsers or anyone can learn how to create custom array methods. 
+This is an array polyfills `.js` file to support few array methods (map, filter, forEach, reverse) which maybe doesn't support in old browsers or anyone can learn how to create custom array methods. 
 ## Prerequisites
-this `index.js` file have to add before of any js files of application. 
+The `index.js` which is inside `main` branch of `https://github.com/santanubiswas948/array-polyfills` repository. you have to add this file before of any others js files of your application.
+- For example if anyone want to use in their application and if their root file of their application is `index.html`
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<!--  add this `index.js` file in first of others `.js` files or javascript codes  -->
+  <script type="text/javascript" src='index.js'></script>
+<!-- After this all .js codes or external scripts   -->
+  
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+</body>
+</html>
+```
+
 ## Supported Array methods
 - ### Map
   This is same like array map method.
