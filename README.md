@@ -1,4 +1,4 @@
-# arraypolyfills
+# array-polyfills
 
 - This is a polyfills `.js` file to support few array methods (map, filter, forEach, reverse) which maybe doesn't support in old browsers or anyone can learn how to create custom array methods. 
 ## Prerequisites
