@@ -1,37 +1,44 @@
-## Welcome to GitHub Pages
+# array-polyfills
 
-You can use the [editor on GitHub](https://github.com/santanubiswas948/array-polyfills/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+- This is a polyfills `.js` file to support few array methods (map, filter, forEach, reverse) which maybe doesn't support in old browsers or anyone can learn how to create custom array methods. 
+## Prerequisites
+- this `index.js` file have to add before of any js files of application. 
+## Supported Array methods
+- ### Map
+  This is same like array map method.
+  this should work like below example:
+```js
+var arr = [1,2,3];
+var newArr = arr.map((item) => item + 1);
+console.log(newArr); // [2,3,4]
+console.log(arr === newArr) // false
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/santanubiswas948/array-polyfills/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- ### Filter
+  This is same like array filter method.
+  this should work like below example:
+```js
+var arr = [1,2,3];
+var newArr = arr.filter((item) => item > 1);
+console.log(newArr); // [2,3]
+console.log(arr === newArr) // false
+```
+- ### forEach
+  This is same like array forEach method.
+  this should work like below example:
+```js
+var arr = [1,2,3];
+var val = arr.forEach((item) => console.log(item));
+// 1 
+// 2
+// 3
+console.log(val); // undefined
+```
+- ### reverse
+  This is same like array reverse method.
+  this should work like below example:
+```js
+var arr = [1,2,3];
+var val = arr.reverse();
+console.log(val) // [3,2,1]
+console.log(val === arr) // true
+```
