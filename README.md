@@ -2,7 +2,7 @@
 
 - This is a polyfills `.js` file to support few array methods (map, filter, forEach, reverse) which maybe doesn't support in old browsers or anyone can learn how to create custom array methods. 
 ## Prerequisites
-- this `index.js` file have to add before of any js files of application. 
+- this `index.js` file have to add before of any js files or js codes of application. 
 ## Supported Array methods
 - ### Map
   This is same like array map method.
