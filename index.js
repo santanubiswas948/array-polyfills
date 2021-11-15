@@ -7,11 +7,12 @@
   console.log(arr === newArr) // false
 */
 if (!Array.prototype.map) {
+    //callback(eachItem, index, array)   
     Array.prototype.map = function(callback) {
         var arr = [];
         try {
             for(var i = 0; i<this.length; i++) {
-                arr.push(callback(this[i]));
+                arr.push(callback(this[i], i, this));
             }
         } catch(e){
             throw new Error(e);
@@ -28,11 +29,12 @@ if (!Array.prototype.map) {
   console.log(arr === newArr) // false
 */
     if (!Array.prototype.filter) {
+        //callback(eachItem, index, array)       
         Array.prototype.filter = function (callback) {
             var arr = [];
             try {
                 for(var i = 0; i<this.length; i++) {
-                    if (callback(this[i])) {
+                    if (callback(this[i], i, this)) {
                         arr.push(this[i]);
                     }
                 }
@@ -50,10 +52,11 @@ if (!Array.prototype.map) {
   console.log(val); // undefined
 */
     if (!Array.prototype.forEach) {
+        //callback(eachItem, index, array)
         Array.prototype.forEach = function (callback) {
             try {
                 for (var i = 0; i< this.length; i++) {
-                    callback(this[i]);
+                    callback(this[i], i, this);
                 }
             } catch(e){
                 throw new Error(e);
@@ -80,5 +83,20 @@ if (!Array.prototype.map) {
           return arr;
         }
     }
+/*
+  Polyfill for Array reduce method
+*/
+   if (!Array.prototype.reduce){
+    //callback(prevVal, eachItem, index, array)
+    Array.prototype.reduce = function(callback, prevVal){
+     try{
+      for(var i = 0; i<this.length; i++){
+        prevVal = callback(prevVal, this[i], i, this);
+      }
+      return prevVal;
+    } catch(e){
+      throw new Error(e);
+    }
+  }
 
 })()
