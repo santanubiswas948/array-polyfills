@@ -1,6 +1,6 @@
 (function(){
 /* 
-  Polyfill for Array map method
+  1. Polyfill for Array map method
   var arr = [1,2,3];
   var newArr = arr.map((item) => item + 1);
   console.log(newArr); // [2,3,4]
@@ -22,7 +22,7 @@ if (!Array.prototype.map) {
 }
 
 /*
-  Polyfill for Array filter method
+  2. Polyfill for Array filter method
   var arr = [1,2,3];
   var newArr = arr.filter((item) => item > 1);
   console.log(newArr); // [2,3]
@@ -45,7 +45,7 @@ if (!Array.prototype.map) {
         }
     }
 /*
-  Ployfill for Array forEach method
+  3. Ployfill for Array forEach method
   Polyfill for Array filter method
   var arr = [1,2,3];
   var val = arr.forEach((item) => console.log(item));
@@ -64,7 +64,7 @@ if (!Array.prototype.map) {
         }
     }
  /*
-  Polyfill for Array reverse method
+  4. Polyfill for Array reverse method
   var arr = [1,2,3];
   var val = arr.reverse();
   console.log(val) // [3,2,1]
@@ -84,7 +84,7 @@ if (!Array.prototype.map) {
         }
     }
 /*
-  Polyfill for Array reduce method
+  5. Polyfill for Array reduce method
 */
    if (!Array.prototype.reduce){
     //callback(prevVal, eachItem, index, array)
