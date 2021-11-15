@@ -65,3 +65,11 @@ var val = arr.reverse();
 console.log(val) // [3,2,1]
 console.log(val === arr) // true
 ```
+- ### reduce
+  This is same like array reduce built-in method.
+  This should work like below example:
+```js
+var arr = [1,2,3];
+var val = arr.reduce((prevVal, item) => { prevVal[item] = item - 1; return prevVal; }, {});
+console.log(val) // {1: 0, 2: 1, 3: 2}
+```
