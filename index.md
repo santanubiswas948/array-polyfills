@@ -57,7 +57,7 @@ var val = arr.forEach((item) => console.log(item));
 console.log(val); // undefined
 ```
 - ### reverse
-  This is same like array reverse method.
+  This is same like array reverse built-in method.
   This should work like below example:
 ```js
 var arr = [1,2,3];
@@ -65,12 +65,11 @@ var val = arr.reverse();
 console.log(val) // [3,2,1]
 console.log(val === arr) // true
 ```
-- ### reverse
-  This is same like array reverse method.
+- ### reduce
+  This is same like array reduce built-in method.
   This should work like below example:
 ```js
 var arr = [1,2,3];
-var val = arr.reverse();
-console.log(val) // [3,2,1]
-console.log(val === arr) // true
+var val = arr.reduce((prevVal, item) => { prevVal[item] = item - 1; return prevVal; }, {});
+console.log(val) // {1: 0, 2: 1, 3: 2}
 ```
