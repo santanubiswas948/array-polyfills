@@ -65,3 +65,12 @@ var val = arr.reverse();
 console.log(val) // [3,2,1]
 console.log(val === arr) // true
 ```
+- ### reverse
+  This is same like array reverse method.
+  This should work like below example:
+```js
+var arr = [1,2,3];
+var val = arr.reverse();
+console.log(val) // [3,2,1]
+console.log(val === arr) // true
+```
